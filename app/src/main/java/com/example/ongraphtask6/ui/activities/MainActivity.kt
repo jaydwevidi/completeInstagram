@@ -25,8 +25,12 @@ class MainActivity : AppCompatActivity() {
             this.state = BottomSheetBehavior.STATE_COLLAPSED
         }
 
+        binding.redirectToRegisterButton.setOnClickListener {
+            startActivity(Intent(applicationContext , RegisterActivity::class.java))
+        }
+
         binding.loginButton.setOnClickListener {
-            toFeedActivity(211)
+            logUserIn()
         }
     }
 
