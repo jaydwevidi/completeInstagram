@@ -16,10 +16,15 @@ class FeedAdapter(val dataset : MutableList<SingleFeedPost> , val context : Cont
 
     inner class MyViewHolder(view : View) : RecyclerView.ViewHolder(view){
         val personName : TextView = view.findViewById(R.id.postCreatorName)
-        val caption : TextView = view.findViewById(R.id.caption)
+        val description : TextView = view.findViewById(R.id.caption)
         val personName2 : TextView = view.findViewById(R.id.profilename2)
         val personDP : ImageView = view.findViewById(R.id.uploaderDPImage)
         val postImage : ImageView = view.findViewById(R.id.postImage)
+        val likes : TextView = view.findViewById(R.id.feedLikesTV)
+        val comments : TextView = view.findViewById(R.id.feedCommentsTV)
+        val shares : TextView = view.findViewById(R.id.feedSharesTV)
+        val time : TextView = view.findViewById(R.id.feedtimetv)
+        //val hashtags : TextView = view.findViewById(R.id.has)
     }
 
 
@@ -31,7 +36,12 @@ class FeedAdapter(val dataset : MutableList<SingleFeedPost> , val context : Cont
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
        holder.personName.text = dataset[position].posterName
        holder.personName2.text = dataset[position].posterName
-       holder.caption.text = dataset[position].content
+       holder.description.text = dataset[position].content
+       holder.likes.text = dataset[position].likes
+       holder.comments.text = dataset[position].comments
+       holder.shares.text = dataset[position].shares
+       holder.time.text = dataset[position].time
+       //holder.hashtags.text = dataset[position].hashtag
 
         ZoomHelper.addZoomableView(holder.postImage)
         ZoomHelper.addZoomableView(holder.personDP)

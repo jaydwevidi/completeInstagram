@@ -5,11 +5,15 @@
       <map>
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/drawable-v24/ic_baseline_arrow_forward_24.xml" value="0.1695" />
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.1695" />
+        <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1695" />
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/drawable/ic_baseline_maximize_24.xml" value="0.1695" />
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/activity_dashboard.xml" value="0.268" />
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/activity_main.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/activity_post_picture.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/feed_item.xml" value="0.268" />
+        <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/fragment_dashboard.xml" value="0.23541666666666666" />
         <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/fragment_home.xml" value="0.28254580520732886" />
+        <entry key="..\:/Users/rajd2/AndroidStudioProjects/OnGraphTask6/app/src/main/res/layout/hashtag_rv_item.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>

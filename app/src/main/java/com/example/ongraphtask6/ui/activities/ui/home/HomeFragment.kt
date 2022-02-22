@@ -95,7 +95,12 @@ private var _binding: FragmentHomeBinding? = null
                 i.user_data.full_name ,
                 "https://static.wikia.nocookie.net/disney/images/1/13/Gal_Gadot.jpg/revision/latest?cb=20180811005357",
                 image ,
-                content = i.description
+                content = i.description,
+                i.feed_like ,
+                i.feed_comments ,
+                i.hashtag.toString(),
+                i.time ,
+                i.feed_share
             )
             dList.add(t)
         }
@@ -109,7 +114,12 @@ private var _binding: FragmentHomeBinding? = null
                 "Wonder Diana" ,
                 "https://static.wikia.nocookie.net/disney/images/1/13/Gal_Gadot.jpg/revision/latest?cb=20180811005357",
                 "https://m.media-amazon.com/images/M/MV5BZWVhYzE0NzgtM2U1Yi00OWM1LWJlZTUtZmNkNWZhM2VkMDczXkEyXkFqcGdeQW1yb3NzZXI@._V1_.jpg",
-                "I will Ride for those who cannot Ride for themselves."
+                "I will Ride for those who cannot Ride for themselves.",
+                "423k",
+                "543",
+                "[haha] , [joker]",
+                "4 hours ago",
+                "54",
             ))
 
         list.add(
@@ -117,7 +127,12 @@ private var _binding: FragmentHomeBinding? = null
                 "Clark Joseph Kent" ,
                 "https://i.guim.co.uk/img/media/1af905f750e1dc85eb490a3ec20bf76fb3ac51f7/0_486_2518_1509/master/2518.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=1257fe1010592f3e91cf17a80471eefa",
                 "https://observer.com/wp-content/uploads/sites/2/2021/05/1_ynJEWSa6ivgFpF0EUP1L_A.jpeg?quality=80&strip",
-                "Wishing all of you a very happy Independence Day.\nStay Safe\nStay Super !!"
+                "Wishing all of you a very happy Independence Day.\nStay Safe\nStay Super !!",
+                "423k",
+                "543",
+                "[haha] , [joker]",
+                "4 hours ago",
+                "54",
             ))
 
         list.add(
@@ -125,7 +140,12 @@ private var _binding: FragmentHomeBinding? = null
                 "Bruce Wayne" ,
                 "https://pyxis.nymag.com/v1/imgs/abd/266/96205bfceb90512ef4e197a6ceb095a349-robert-pattinson.rvertical.w1200.jpg",
                 "https://wegotthiscovered.com/wp-content/uploads/2021/05/the-batman-statue-1.jpg",
-                "I'm Batman"
+                "I'm Batman",
+                "423k",
+                "543",
+                "[haha] , [joker]",
+                "4 hours ago",
+                "54",
             ))
 
         list.add(
@@ -133,7 +153,12 @@ private var _binding: FragmentHomeBinding? = null
                 "Barry Allen" ,
                 "https://media1.popsugar-assets.com/files/thumbor/kRHOD_VRocEvhfhkC5j8WNTQgAY/569x195:2942x2568/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/12/09/863/n/1922398/fce2eeaf5deea3c3b39189.70140056_/i/Grant-Gustin.jpg",
                 "https://wallpapersmug.com/large/da5647/minimal-flash-barry-allen.jpg",
-                "Run Barry , Run !!"
+                "Run Barry , Run !!",
+                "423k",
+                "543",
+                "[haha] , [joker]",
+                "4 hours ago",
+                "54",
             ))
 
 

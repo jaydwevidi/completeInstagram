@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.loginButton.setOnClickListener {
-            logUserIn()
+            toFeedActivity(211)
         }
     }
 

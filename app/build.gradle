@@ -80,4 +80,8 @@ dependencies {
 
     //login google icon
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+
+    //Permission Manager Dexter
+    implementation 'com.karumi:dexter:6.2.3'
 }
