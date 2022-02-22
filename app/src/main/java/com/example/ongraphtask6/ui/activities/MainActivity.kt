@@ -39,12 +39,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun logUserIn(){
+        binding.LoginEmailEtHolder.helperText = ""
+        binding.loginPasswordETHolder.helperText = ""
         val email = binding.emailloginet.text.toString()
         val password = binding.loginpasswordet.text.toString()
 
         if(email == "")
         {
-            binding.loginPasswordETHolder.helperText = "Email Address Empty"
+            binding.LoginEmailEtHolder.helperText = "Email Address Empty"
             return
         }
 

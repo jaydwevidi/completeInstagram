@@ -89,7 +89,7 @@
 
                 >
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/LoginEmailETHolder"
+                    android:id="@+id/LoginEmailEtHolder"
 
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
@@ -99,6 +99,7 @@
                     android:drawableStart="@drawable/ic_baseline_mail_outline_24"
                     android:drawablePadding="10dp"
                     android:hint="Email Address"
+                    app:helperTextTextColor="#f00"
                     android:inputType="textEmailAddress"
                     app:counterEnabled="true"
                     app:counterMaxLength="30"
