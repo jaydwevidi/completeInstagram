@@ -31,7 +31,7 @@
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputEditText"
+            android:id="@+id/LoginEmailETHolder"
 
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
@@ -77,22 +77,20 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postThePicture"
+            android:layout_gravity="center"
+            android:text="upload"
+            />
+
+
         <Space
             android:layout_width="wrap_content"
             android:layout_height="10dp"
 
             />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/postThePicture"
-            />
-
-
-
-
-
-
 
     </LinearLayout>
 </ScrollView>

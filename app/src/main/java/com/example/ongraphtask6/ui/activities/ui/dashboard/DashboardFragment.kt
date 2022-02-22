@@ -7,20 +7,16 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.aghajari.zoomhelper.ZoomHelper
 import com.bumptech.glide.Glide
-import com.example.ongraphtask6.R
 import com.example.ongraphtask6.databinding.FragmentDashboardBinding
 import com.example.ongraphtask6.retrofit.models.ImageFileObject
 import com.example.ongraphtask6.rv.GridRVAdapter
-import com.example.ongraphtask6.ui.activities.MainActivity
+import com.example.ongraphtask6.ui.activities.PostPictureActivity
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -116,6 +112,7 @@ private var _binding: FragmentDashboardBinding? = null
     _binding!!.postPictureButton.setOnClickListener {
       val intent = Intent(context , PostPictureActivity::class.java)
       intent.putExtra("1" , selectedPicture )
+      intent.putExtra("uid" , requireActivity().intent.getIntExtra("uid" , 0))
       startActivity(intent)
     }
   }

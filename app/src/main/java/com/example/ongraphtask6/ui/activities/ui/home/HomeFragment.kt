@@ -40,7 +40,10 @@ private var _binding: FragmentHomeBinding? = null
     homeViewModel.text.observe(viewLifecycleOwner) {
 
     }
+    _binding!!.swipeLayoutRefresh.setOnRefreshListener {
+        getDList()
 
+    }
     getDList()
     return root
   }
@@ -51,14 +54,16 @@ private var _binding: FragmentHomeBinding? = null
             adapter = FeedAdapter(list ,  context)
             layoutManager = LinearLayoutManager(context , LinearLayoutManager.VERTICAL , false)
         }
+        _binding!!.swipeLayoutRefresh.isRefreshing = false
     }
 
     private fun getDList() {
+        val uid = activity?.intent?.getIntExtra("uid" , 0)!!
         lifecycleScope.launchWhenCreated {
             val response = try {
-                val id = activity?.intent?.getIntExtra("uid" , 0)!!
+
                 ViewFeedBuilderInstance.builderAPI.addToFeed(
-                    UserIDToSend(id)
+                    UserIDToSend(uid)
                 )
             }
 
@@ -69,7 +74,7 @@ private var _binding: FragmentHomeBinding? = null
 
             if(response.isSuccessful){
                 val body = response.body()
-                Log.d(TAG, "onCreate: response successful ${response.body()}")
+                Log.d(TAG, "onCreate: response successful for uid - $uid ${response.body()}")
                 bodyToList(body!!)
             }
             else{

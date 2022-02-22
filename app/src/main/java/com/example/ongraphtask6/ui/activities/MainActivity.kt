@@ -32,11 +32,27 @@ class MainActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             logUserIn()
         }
+
+        binding.textViewCheatLogin.setOnClickListener {
+            toFeedActivity(211)
+        }
     }
 
     private fun logUserIn(){
         val email = binding.emailloginet.text.toString()
         val password = binding.loginpasswordet.text.toString()
+
+        if(email == "")
+        {
+            binding.loginPasswordETHolder.helperText = "Email Address Empty"
+            return
+        }
+
+        if(password == "")
+        {
+            binding.loginPasswordETHolder.helperText = "Password Empty"
+            return
+        }
 
         lifecycleScope.launchWhenCreated {
             val response = try {

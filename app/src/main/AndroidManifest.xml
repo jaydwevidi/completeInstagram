@@ -17,7 +17,7 @@
             android:name=".ui.activities.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.ui.dashboard.PostPictureActivity"
+            android:name=".ui.activities.PostPictureActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.DashboardActivity"

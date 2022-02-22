@@ -1,6 +1,7 @@
-package com.example.ongraphtask6.ui.activities.ui.dashboard
+package com.example.ongraphtask6.ui.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ongraphtask6.R
 import com.example.ongraphtask6.databinding.ActivityPostPictureBinding
-import com.example.ongraphtask6.rv.GridRVAdapter
 import com.example.ongraphtask6.rv.HashTagRvAdapter
 import com.example.uploadfeed.retrofit.BuilderInstanceUploadPic
 import okhttp3.MediaType
@@ -110,6 +110,8 @@ class PostPictureActivity : AppCompatActivity() {
     }
 
     private fun postPic(mFile: File) {
+        val uid = intent.getIntExtra("uid" , 0)
+
         binding.postThePicture.setOnClickListener {
 
             val filePart = MultipartBody.Part.createFormData(
@@ -125,7 +127,7 @@ class PostPictureActivity : AppCompatActivity() {
 
             val id: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                "211"
+                "$uid"
             )
 
 
@@ -151,7 +153,9 @@ class PostPictureActivity : AppCompatActivity() {
 
                 if (response.isSuccessful) {
                     val body = response.body()
-                    Log.d(TAG, "onCreate: response successful ${response.body()}")
+                    Log.d(TAG, "onCreate: response successful $body")
+                    Toast.makeText(baseContext, "Uploaded", Toast.LENGTH_SHORT).show()
+                    onBackPressed()
                 } else {
                     Log.d(TAG, "onCreate: response unsuccessful")
                     Toast.makeText(applicationContext, "some Error Occurred", Toast.LENGTH_SHORT)
