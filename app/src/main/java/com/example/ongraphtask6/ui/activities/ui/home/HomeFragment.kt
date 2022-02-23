@@ -45,6 +45,7 @@ private var _binding: FragmentHomeBinding? = null
 
     }
     getDList()
+
     return root
   }
     private fun setupRecyclerView(context : Context, list : MutableList<SingleFeedPost> ){

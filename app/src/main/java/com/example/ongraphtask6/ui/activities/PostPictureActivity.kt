@@ -33,7 +33,6 @@ class PostPictureActivity : AppCompatActivity() {
         binding = ActivityPostPictureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val path = intent.getStringExtra("1")
         val file = File(path!!)
 

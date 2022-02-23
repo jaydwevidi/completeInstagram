@@ -16,13 +16,15 @@ class DashboardActivity : AppCompatActivity() {
 
 private lateinit var binding: ActivityDashboardBinding
 
+    private lateinit var navView : BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
      binding = ActivityDashboardBinding.inflate(layoutInflater)
      setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        navView= binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_dashboard)
         // Passing each menu ID as a set of Ids because each
@@ -35,5 +37,9 @@ private lateinit var binding: ActivityDashboardBinding
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
         return ZoomHelper.getInstance().dispatchTouchEvent(ev!!,this) || super.dispatchTouchEvent(ev)
+    }
+
+    fun goToFeedFragment(id : Int){
+        navView.selectedItemId = id
     }
 }

@@ -16,7 +16,6 @@ object BuilderInstanceUploadPic {
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
-
     val builderAPI by lazy {
         myBuilder.create(RfApiInterface::class.java)
     }

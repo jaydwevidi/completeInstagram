@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun logUserIn(){
+
         binding.LoginEmailEtHolder.helperText = ""
         binding.loginPasswordETHolder.helperText = ""
         val email = binding.emailloginet.text.toString()
